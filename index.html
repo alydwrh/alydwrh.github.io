@@ -1,9 +1,60 @@
-<html>
-<head>
-    <title>Perkenalan Diri</title>
-</head>
-<body>
-    <h1>PERKENALAN DIRI</h1>
-    <P>Nama     : Alya Dwi Rahma<br>Kelas       : SI4606 <br>Nim        : 1202223043 <br></P>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nama Nim</title>
+        <link rel="stylesheet" href="css-coba.css">
+        <style>
+            .date-time {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="Edit Foto 4x6.jpg" alt="Foto" class="profile-photo">
+        <h1 style="text-align: center;">ALYA DWI RAHMA - 1202223043</h1>
+        <p><a href="">
+        <div class="sosmed">
+            <div class="instagram">
+                <a href="https://www.instagram.com/alyadwrh/"><img src="Instagram-Logo.png" alt="Instagram" width="30" height="30"></a>
+            </div>
+            <div class="whatsapp">
+                <a href="https://wa.me/6282273244986"><img src="logo wa png yogiancreative.png" alt="Whatsapp" width="30" height="30"></a>
+            </div>
+        </div>
+            
+        </a></p>
+
+        <div class="date-time" id="date-time"></div>
+
+        <script>
+            function updateTime() {
+                var now = new Date();
+                var options = { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit',
+                    hour12: false
+                };
+                var formattedDateTime = now.toLocaleDateString('en-US', options);
+                document.getElementById('date-time').innerHTML = formattedDateTime;
+            }
+
+            setInterval(updateTime, 1000);
+
+            updateTime();
+        </script>
+    </body>
 </html>
